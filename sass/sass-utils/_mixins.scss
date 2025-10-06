@@ -1,0 +1,40 @@
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+@mixin tablet-mobile {
+    @media (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin flex-center ($justify:center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin slide-in-left {
+    @keyframes slide-in-left {
+        0% {left :-100px ;}
+        100% {left :0 ;}
+
+    }
+
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
