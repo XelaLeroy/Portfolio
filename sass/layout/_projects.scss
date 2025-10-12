@@ -55,4 +55,8 @@
         }
     }
     }
+
+    .project-btn {
+        @include m.button();
+    }
 }
