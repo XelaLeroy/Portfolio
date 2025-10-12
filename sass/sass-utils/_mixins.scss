@@ -1,32 +1,42 @@
+@use 'variables';
+
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) {
+  @media (min-width: #{variables.$desktop-width}) {
     @content;
   }
 }
 
 @mixin mobile {
-    @media (max-width: #{$mobile-width}) {
+    @media (max-width: #{variables.$mobile-width}) {
         @content;
     }
 }
 
 @mixin tablet-mobile {
-    @media (max-width: #{$desktop-width}) {
+    @media (max-width: #{variables.$desktop-width}) {
         @content;
     }
 }
 
-@mixin flex-center ($justify:center) {
+@mixin flex-center ($justify:center, $flex-direction:row) {
     display: flex;
     align-items: center;
     justify-content: $justify;
+    flex-direction: $flex-direction;
 }
+
+@mixin flex-gap ($gap:10px, $flex-direction:column) {
+    display: flex;
+    flex-direction: $flex-direction;
+    row-gap : $gap;
+}
+
 
 @mixin slide-in-left {
     @keyframes slide-in-left {
@@ -37,4 +47,19 @@
 
     animation: slide 0.5s forwards;
     animation-delay: 2s;
+}
+
+@mixin button {
+ @include flex-center;
+  color: variables.$secondary-color;
+  background-color: transparent;
+  border-radius: variables.$radius-md;
+  border: variables.$secondary-color 1px solid;
+  box-shadow :  0px 0px 4px 3px variables.$secondary-color;
+
+  padding: 10px ;
+
+  &:hover {
+    background-color: white;
+  }
 }

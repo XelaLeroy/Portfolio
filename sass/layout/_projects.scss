@@ -1,0 +1,58 @@
+@use '../sass-utils/variables' as v;
+@use '../sass-utils/mixins' as m;
+
+#projects {
+    @include m.flex-center($flex-direction : column);
+    row-gap: 40px;
+
+    .projects {
+        .project-item {
+            
+            border: 2px white solid;
+            @include m.flex-center($flex-direction : column);
+            row-gap: 20px;
+            border-radius: v.$radius-sm;
+
+            .project-img-container {
+                max-width: 380px;
+
+                .project-img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 5/3;
+                    object-fit: cover;
+
+
+                }
+            }
+
+            .project-content {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+            padding: 20px;
+
+            .project-title {
+                font-size: 24px;
+                color: white;
+            }
+
+            .project-technos {
+                    display: flex;
+                    column-gap: 5px;
+
+                p{
+                    background-color: v.$primary-bg-card-bg;
+                    padding: 5px 15px;
+                    border-radius: v.$radius-sm;
+
+                }
+            }
+            .project-description {
+                color: white;
+
+            }
+        }
+    }
+    }
+}

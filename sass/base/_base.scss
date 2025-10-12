@@ -1,5 +1,17 @@
+@use '../sass-utils/variables';
+
+
 html {
-    background-color: $primary-bg-color;
+    background-color: variables.$primary-bg-color;
     font-family: 'Poppins';
 }
 
+section {
+    padding: 0px 40px;
+}
+
+h2 {
+    font-size : 28px;
+    color: white;
+    text-align: center;
+}

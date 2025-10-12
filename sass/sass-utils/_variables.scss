@@ -1,15 +1,25 @@
 // Breakpoints //
 
+@use 'sass:color';
+
+
 $tablet-width: 768px;
 $desktop-width: 1024px;
-$mobile-width : 360px;
+$mobile-width : 576px;
 
 // Colors //
 
-$primary-bg-color : #121212;
-$lighter-primary-bg-color : lighten(#121212,40%);
+$primary-bg-color: #121212;
+$primary-bg-card-bg: color.adjust($primary-bg-color, $lightness: 40%);
+$primary-bg-hover: color.adjust($primary-bg-color, $lightness: 70%);
 
-$transparent-lighter-bg-color: lighten(rgba(18, 18, 18, 0.3),40%);
+
+
+
+
+$transparent-lighter-bg-color: rgba(18, 18, 18, 0.3); 
+$transparent-lighter-bg-color: color.mix(white, $transparent-lighter-bg-color, 70%); 
+$secondary-color : #DE19EF;
 
 
 $white: #fff;
@@ -18,10 +28,10 @@ $white: #fff;
 
 $radius-sm :8px;
 $radius-md :16px;
-$radius-sm :32px;
+$radius-lg :32px;
 
 // Fonts
 
 $font-size-sm :12px;
 $font-size-md :14px;
-$font-size-sm :16px;
+$font-size-lg :16px;

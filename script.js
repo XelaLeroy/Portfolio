@@ -13,3 +13,22 @@ close_button.addEventListener('click', () => {
     close_button.style.display = 'none';
 
 })
+
+const buttons = document.querySelectorAll('.skills-btn button');
+const cardInner = document.querySelector('.skills-card-inner');
+
+// Ajouter un clic sur chaque bouton
+buttons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    // Toggle la classe active sur les boutons
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Si c'est le deuxième bouton (Soft Skills), flip la carte
+    if(index === 1) {
+      cardInner.classList.add('flipped');
+    } else {
+      cardInner.classList.remove('flipped');
+    }
+  });
+});
