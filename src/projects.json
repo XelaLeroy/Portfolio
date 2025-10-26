@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Job Board MVC",
+    "short_description": "Plateforme de mise en relation entre candidats et recruteurs développée en architecture MVC.",
+    "description": "Conception et développement complet d’un job board basé sur le pattern MVC. Le projet intègre la création d’offres, la gestion des candidatures et un tableau de bord administrateur. Objectif : renforcer mes compétences en structure de projet, logique serveur et manipulation de bases de données. Développement full stack avec une approche orientée composants et séparation claire des responsabilités.",
+    "image": "/images/job_board.png",
+    "technos": ["ReactJS", "Node JS", "Express"]
+  },
+  {
+    "id": "2",
+    "title": "Refonte Application Section Paloise",
+    "short_description": "Modernisation et refonte de l’application mobile de la Section Paloise pour améliorer l’expérience des supporters.",
+    "description": "Participation à la refonte complète de l’application mobile de la Section Paloise. Objectifs : améliorer l’ergonomie, la performance et l’engagement des utilisateurs. Mise en place de nouvelles interfaces ReactJS et intégration d’un backend en Flask pour la gestion des données dynamiques (matchs, classements, actualités). Le travail a porté sur la cohérence graphique et la fluidité de navigation sur mobile.",
+    "image": "/images/Section-paloise.png",
+    "technos": ["ReactJS", "Flask"]
+  },
+  {
+    "id": "3",
+    "title": "Conception et développement du site INWIN Pau Pyrénées",
+    "short_description": "Création du site vitrine de l’agence INWIN Pau Pyrénées avec une mise en avant claire des services B2B.",
+    "description": "Développement du site vitrine de l’agence INWIN Pau Pyrénées, de la maquette à la mise en ligne. L’objectif était de proposer une interface claire, responsive et optimisée pour le SEO. Réalisé sous WordPress avec le constructeur DIVI, le site présente les services de l’agence, les études de cas clients et un formulaire de contact dynamique. Travail sur la cohérence graphique, les animations légères et la hiérarchie visuelle.",
+    "image": "/images/INWIN_Website.png",
+    "technos": ["Wordpress", "DIVI", "CSS"]
+  }
+]

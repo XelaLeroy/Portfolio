@@ -1,0 +1,69 @@
+@use '../sass-utils/variables' as v;
+@use '../sass-utils/mixins' as m;
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact-card {
+    background-color: v.$primary-bg-card-bg;
+    border-radius: v.$radius-lg;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.5);
+    background-color: v.$transparent-lighter-bg-color;
+    backdrop-filter: blur(10px);
+    border: 0.5px solid white;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: v.$secondary-color;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 0.5rem;
+        font-size: v.$font-size-md;
+    }
+
+    input,
+    textarea {
+        background-color: #fff;
+        border: none;
+        border-radius: v.$radius-md;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        font-size: v.$font-size-md;
+        transition: background-color 0.3s;
+
+        &:focus {
+            background-color: v.$primary-bg-hover;
+            outline: none;
+        }
+    }
+
+    button {
+        background-color: v.$secondary-color;
+        color: v.$white;
+        border: none;
+        text-align: center;
+        border-radius: v.$radius-md;
+        padding: 0.75rem;
+        font-size: v.$font-size-lg;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: v.$transparent-lighter-bg-color
+        }
+    }
+}

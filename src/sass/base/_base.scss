@@ -1,0 +1,37 @@
+@use '../sass-utils/variables' as v;
+@use '../sass-utils/mixins' as m;
+@use 'sass:color';
+
+
+html {
+    background-color: v.$primary-bg-color;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    min-height: 100%;
+    background-image:
+        radial-gradient(circle at 0% 0%, color.adjust(v.$transparent-secondary-color, $alpha: 0.6) 0%, transparent 20%),
+        radial-gradient(circle at 100% 100%, color.adjust(v.$transparent-secondary-color, $alpha: 0.5) 0%, transparent 25%),
+}
+
+
+
+section {
+    padding: 20px 40px;
+}
+
+h2 {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+}

@@ -1,5 +1,12 @@
 {
   "devDependencies": {
-    "sass": "^1.93.2"
+    "live-server": "^1.2.2",
+    "sass": "^1.93.2",
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run sass\" \"npm run serve\"",
+    "sass": "sass --watch src/sass/style.scss src/dist/style.css",
+    "serve": "live-server src --watch=,dist"
   }
 }

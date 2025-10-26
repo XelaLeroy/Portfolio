@@ -1,0 +1,61 @@
+@use '../sass-utils/mixins' as m;
+@use '../sass-utils/variables' as v;
+
+
+#hero {
+    @include m.flex-center($flex-direction : column);
+    row-gap: 20px;
+    position: relative;
+    margin-top: 100px;
+
+    .hero-title {
+        font-size: 28px;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-img-container {
+        margin: 0 auto;
+        max-width: 150px;
+
+
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 100px;
+
+            &:hover {
+                border-radius: 30px;
+                transition: 0.3s ease-in-out;
+
+            }
+        }
+    }
+
+    .hero-description {
+        color: white;
+        font-weight: 500;
+        width: 80%;
+        line-height: normal;
+    }
+
+    button {
+        @include m.button();
+    }
+
+    .hr-solid {
+        background-color: white;
+        width: 70%;
+        height: 2px;
+    }
+
+    @include m.desktop {
+
+        .hero-img-container {
+            margin: 0 auto;
+            max-width: 250px;
+        }
+
+    }
+
+}

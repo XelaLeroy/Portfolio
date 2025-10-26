@@ -1,0 +1,158 @@
+@use '../sass-utils/variables' as v;
+@use '../sass-utils/mixins' as m;
+
+#projects {
+    @include m.flex-center($flex-direction : column);
+    row-gap: 40px;
+
+    .projects {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr; // adaptatif
+        gap: 50px;
+        width: 100%;
+
+        .project-item {
+
+            border: 2px white solid;
+            @include m.flex-center($flex-direction : column);
+            row-gap: 20px;
+            border-radius: v.$radius-sm;
+
+            @include m.desktop {
+                flex-direction: row;
+                align-items: center;
+
+                .project-img-container {
+                    flex: 0 0 40%; // image prend 40% de la largeur
+                    text-align: left;
+
+                    .project-img {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                }
+
+                .project-content {
+                    flex: 1; // le texte prend le reste
+                    text-align: left;
+                    padding: 30px;
+                }
+
+
+            }
+
+            .project-img-container {
+                max-width: 380px;
+
+                .project-img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 5/3;
+                    object-fit: cover;
+
+
+                }
+            }
+
+            .project-content {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                padding: 20px;
+
+                .project-title {
+                    font-size: 24px;
+                    color: white;
+                }
+
+                .project-technos {
+                    display: flex;
+                    column-gap: 5px;
+
+                    p {
+                        background-color: v.$primary-bg-card-bg;
+                        padding: 5px 15px;
+                        border-radius: v.$radius-sm;
+
+                    }
+                }
+
+                .project-description {
+                    color: white;
+
+                }
+            }
+        }
+    }
+
+    .project-btn {
+        @include m.button();
+    }
+}
+
+
+.project-page {
+    color: white;
+    padding: 40px 20px;
+    min-height: 100vh;
+
+    .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: v.$secondary-color;
+        }
+    }
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+
+        .project-img {
+            max-width: 600px;
+            width: 100%;
+            border-radius: v.$radius-md;
+        }
+
+        .project-description {
+            max-width: 800px;
+            line-height: 1.6;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .project-technos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            span {
+                background: v.$transparent-secondary-color;
+                border-radius: 20px;
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @include m.desktop {
+        .project-content {
+            flex-direction: row;
+            align-items: flex-start;
+            column-gap: 40px;
+
+            .project-img {
+                flex: 1;
+            }
+
+            .project-description {
+                flex: 2;
+            }
+        }
+    }
+}
