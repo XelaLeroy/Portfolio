@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev": "concurrently \"npm run sass\" \"npm run serve\"",
-    "sass": "sass --watch src/sass/style.scss src/dist/style.css",
+    "sass": "sass --watch src/sass/style.scss style.css",
     "serve": "live-server src --watch=,dist"
   }
 }
